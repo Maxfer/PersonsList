@@ -28,7 +28,7 @@ class ContactListViewController: UITableViewController {
 // MARK: - Table view data source
 
 extension ContactListViewController {
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         personList.count
     }
@@ -40,8 +40,9 @@ extension ContactListViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "contacts", for: indexPath)
-        var content = cell.defaultContentConfiguration()
         let person = personList[indexPath.section]
+        
+        var content = cell.defaultContentConfiguration()
         
         switch indexPath.row {
         case 1:

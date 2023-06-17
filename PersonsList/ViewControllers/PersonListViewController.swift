@@ -9,9 +9,9 @@ import UIKit
 
 class PersonListViewController: UITableViewController {
     
-// MARK: — Private Propereties
-var personList = Person.getPersons()
-   
+    // MARK: — Private Propereties
+    var personList = Person.getPersons()
+    
     // MARK: — Override Methds
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailPersonVC = segue.destination as? PersonDetailViewController else { return }

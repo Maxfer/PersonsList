@@ -16,6 +16,8 @@
 		3E099D972A3C7AAB000723A4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E099D962A3C7AAB000723A4 /* DataManager.swift */; };
 		3E099D992A3C8E7D000723A4 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E099D982A3C8E7D000723A4 /* PersonListViewController.swift */; };
 		3E099D9B2A3CDD72000723A4 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E099D9A2A3CDD72000723A4 /* PersonDetailViewController.swift */; };
+		3E099D9D2A3CEC71000723A4 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E099D9C2A3CEC71000723A4 /* ContactListViewController.swift */; };
+		3E099D9F2A3CED89000723A4 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E099D9E2A3CED89000723A4 /* MainTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3E099D962A3C7AAB000723A4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3E099D982A3C8E7D000723A4 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 		3E099D9A2A3CDD72000723A4 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
+		3E099D9C2A3CEC71000723A4 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		3E099D9E2A3CED89000723A4 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				3E099D982A3C8E7D000723A4 /* PersonListViewController.swift */,
 				3E099D9A2A3CDD72000723A4 /* PersonDetailViewController.swift */,
+				3E099D9C2A3CEC71000723A4 /* ContactListViewController.swift */,
+				3E099D9E2A3CED89000723A4 /* MainTabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -188,10 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E099D972A3C7AAB000723A4 /* DataManager.swift in Sources */,
+				3E099D9F2A3CED89000723A4 /* MainTabBarViewController.swift in Sources */,
 				3E099D7C2A3C75F7000723A4 /* AppDelegate.swift in Sources */,
 				3E099D9B2A3CDD72000723A4 /* PersonDetailViewController.swift in Sources */,
 				3E099D992A3C8E7D000723A4 /* PersonListViewController.swift in Sources */,
 				3E099D942A3C76A8000723A4 /* Person.swift in Sources */,
+				3E099D9D2A3CEC71000723A4 /* ContactListViewController.swift in Sources */,
 				3E099D7E2A3C75F7000723A4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

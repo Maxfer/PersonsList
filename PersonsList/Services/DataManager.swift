@@ -68,7 +68,7 @@ class DataManager {
             let code3 = String(Int.random(in: 300...999))
             let code4 = String(Int.random(in: 10...99))
             let code5 = String(Int.random(in: 10...99))
-            phones.append("+\(code1)-\(code2)-\(code3)-\(code4)-\(code5)")
+            phones.append("+\(code1)(\(code2))\(code3)-\(code4)-\(code5)")
         }
         
         // MARK: — Emails

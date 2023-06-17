@@ -17,17 +17,24 @@ struct Person {
         let dataManager = DataManager()
         dataManager.loadData()
         var persons: [Person] = []
-        var nameTest = ""
         for _ in 0...15 {
-            nameTest = dataManager.names[Int.random(in: 0..<dataManager.names.count)]
-            print("name - \(nameTest)")
+            let indexName = Int.random(in: 0..<dataManager.names.count)
+            let indexSurname = Int.random(in: 0..<dataManager.surnames.count)
+            let indexPhones = Int.random(in: 0..<dataManager.phones.count)
+            let indexEmails = Int.random(in: 0..<dataManager.emails.count)
+            
             persons.append(
                 Person(
-                    name: dataManager.names[Int.random(in: 0..<dataManager.names.count)],
-                    surname: dataManager.surnames[Int.random(in: 0..<dataManager.surnames.count)],
-                    phone: dataManager.phones[Int.random(in: 0..<dataManager.phones.count)],
-                    email: dataManager.emails[Int.random(in: 0..<dataManager.emails.count)])
+                    name: dataManager.names[indexName],
+                    surname: dataManager.surnames[indexSurname],
+                    phone: dataManager.phones[indexPhones],
+                    email: dataManager.emails[indexEmails])
             )
+            
+            dataManager.names.remove(at: indexName)
+            dataManager.surnames.remove(at: indexSurname)
+            dataManager.phones.remove(at: indexPhones)
+            dataManager.emails.remove(at: indexEmails)
         }
         
         return persons

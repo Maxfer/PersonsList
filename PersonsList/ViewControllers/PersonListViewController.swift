@@ -10,15 +10,15 @@ import UIKit
 class PersonListViewController: UITableViewController {
     
     // MARK: — Private Propereties
-    var personList = Person.getPersons()
+    var personList: [Person] = []
     
     // MARK: — Override Methds
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailPersonVC = segue.destination as? PersonDetailViewController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        detailPersonVC.navigationItem.title = personList[indexPath.row].fullName
-        detailPersonVC.phone = "Phone: \(personList[indexPath.row].phone)"
-        detailPersonVC.email = "E-mail: \(personList[indexPath.row].email)"
+        detailPersonVC.title = personList[indexPath.row].fullName
+        detailPersonVC.phone = personList[indexPath.row].phone
+        detailPersonVC.email = personList[indexPath.row].email
     }
     
 }

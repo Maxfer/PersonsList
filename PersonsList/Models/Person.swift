@@ -6,37 +6,30 @@
 //
 
 struct Person {
+     
     let name: String
     let surname: String
     let phone: String
     let email: String
+    
     var fullName: String {
         "\(name) \(surname)"
     }
+}
+
+extension Person {
     static func getPersons() -> [Person] {
-        let dataManager = DataManager()
-        dataManager.loadData()
         var persons: [Person] = []
-        for _ in 0...15 {
-            let indexName = Int.random(in: 0..<dataManager.names.count)
-            let indexSurname = Int.random(in: 0..<dataManager.surnames.count)
-            let indexPhones = Int.random(in: 0..<dataManager.phones.count)
-            let indexEmails = Int.random(in: 0..<dataManager.emails.count)
-            
+        
+        for index in 0...15 {
             persons.append(
                 Person(
-                    name: dataManager.names[indexName],
-                    surname: dataManager.surnames[indexSurname],
-                    phone: dataManager.phones[indexPhones],
-                    email: dataManager.emails[indexEmails])
+                    name: DataManager.shared.names[index],
+                    surname: DataManager.shared.surnames[index],
+                    phone: DataManager.shared.phones[index],
+                    email: DataManager.shared.emails[index])
             )
-            
-            dataManager.names.remove(at: indexName)
-            dataManager.surnames.remove(at: indexSurname)
-            dataManager.phones.remove(at: indexPhones)
-            dataManager.emails.remove(at: indexEmails)
         }
-        
         return persons
     }
 }

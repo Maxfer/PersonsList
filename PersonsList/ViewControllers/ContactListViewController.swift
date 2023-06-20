@@ -11,18 +11,6 @@ class ContactListViewController: UITableViewController {
     
     var personList: [Person] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        guard let controllers = tabBarController else { return }
-        guard let viewList = controllers.viewControllers  else { return }
-        
-        viewList.forEach ({ viewController in
-            guard let navigationC = viewController as? UINavigationController else { return }
-            guard let persListVC = navigationC.topViewController as? PersonListViewController else { return }
-            personList = persListVC.personList
-        })
-    }
 }
 
 // MARK: - Table view data source
